@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 35px;
+            margin-top: 10px !important;
+        }
+
+        .card {
+            width: 220px; /* Povećana širina za 50px */
+            height: 350px; /* Povećana visina za 150px */
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        #dva{
+            background-image: url("sean-pollock-PhYq704ffdA-unsplash.jpg");
+            background-size: cover;
+            background-position: center;
+            padding:20px;
+        }
+        #tri{
+            background-image: url("sean-pollock-PhYq704ffdA-unsplash.jpg");
+            background-size: cover;
+            background-position: center;
+            padding:20px;
+        }
+        #cetiri{
+            background-image: url("sean-pollock-PhYq704ffdA-unsplash.jpg");
+            background-size: cover;
+            background-position: center;
+            padding:20px;
+        }
+        #pet{
+            background-image: url("sean-pollock-PhYq704ffdA-unsplash.jpg");
+            background-size: cover;
+            background-position: center;
+            padding:20px;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+        }
+
+        #zavodnik {
+            background-image: url("sean-pollock-PhYq704ffdA-unsplash.jpg");
+            background-size: cover;
+            background-position: center;
+            padding:20px;
+        }
+
+        body {
+            background-color: black;
+        }
+        
+        .card:not(#zavodnik) {
+            margin-top: 15px; /* Dodajemo 15px odstupanja od gornje ivice za sve kartice osim zavodnika */
+            margin-bottom: 15px; /* Dodajemo 15px odstupanja na dole za sve kartice osim zavodnika */
+        }
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .slide-in {
+            animation: slideInFromLeft 1s ease-out;
+        }
+        body::after{
+        content:'';
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:linear-gradient(gray,black);
+        clip-path:circle(25% at right 70%);
+        position:fixed !important;
+        z-index:-1 !important;
+      }
+      body::before{
+        content:'';
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:linear-gradient(black,gray);
+        clip-path:circle(20% at left 30%);
+        position:fixed !important;
+        z-index:-1 !important;
+      }
+    </style>
+</head>
+<body class="slide-in">
+    <div class="container">
+        <div class="card" id="zavodnik">
+            <div class="button-container">
+                <h4 style="color: white; margin-bottom: 250px;">Meditacija za otpustanje anksioznosti i negativnosti</h4>
+                <button style="width:200px;height:30px;border-radius:10px; background-color:black; color:white;border:transparent;">Kupi</button>
+                <p style="color: cornflowerblue; margin-top: 10px;">$30.00</p>
+            </div>
+        </div>
+        <div class="card" id="dva">
+            <div class="button-container">
+                <h4 style="color: white; margin-bottom: 250px;">Meditacija za premamiranje unutrasnjeg deteta</h4>
+                <button style="width:200px;height:30px;border-radius:10px;background-color:black; color:white;border:transparent;">Kupi</button>
+                <p style="color: cornflowerblue; margin-top: 10px;">$80.00</p>
+            </div>
+        </div>
+        <div class="card" id="tri">
+            <div class="button-container">
+                <h4 style="color: white; margin-bottom: 250px;">Meditacija za promenu uverenja</h4>
+                <button style="width:200px;height:30px;border-radius:10px;background-color:black; color:white;border:transparent;">Kupi</button>
+                <p style="color: cornflowerblue; margin-top: 10px;">$55.00</p>
+            </div>
+        </div>
+        <div class="card" id="cetiri">
+            <div class="button-container">
+                <h4 style="color: white; margin-bottom: 250px;">Meditacija za ranjeno unutrasnje dete </h4>
+                <button style="width:200px;height:30px;border-radius:10px;background-color:black; color:white;border:transparent;">Kupi</button>
+                <p style="color: cornflowerblue; margin-top: 10px;">$70.00</p>
+            </div>
+        </div>
+        <div class="card" id="pet">
+            <div class="button-container">
+                <h4 style="color: white; margin-bottom: 250px;">Meditacija emocijonalni detoks </h4>
+                <button style="width:200px;height:30px;border-radius:10px;background-color:black; color:white;border:transparent;">Kupi</button>
+                <p style="color:cornflowerblue; margin-top: 10px;">$25.00</p>
+            </div>
+        </div>
+        <!-- Dodatna kartica u drugom redu -->
+        <div class="card" id="sest" style="background-image:url(sean-pollock-PhYq704ffdA-unsplash.jpg); background-size:cover;background-position:center;  width: 300px;
+        height: 390px;" >
+            <div class="button-container">
+                <h4 style="color: white; margin-bottom: 250px;">Meditacija otpustanje emocionalnog tereta</h4>
+                <button style="width:200px;height:30px;border-radius:10px;background-color:black; color:white;border:transparent;">Kupi</button>
+                <p style="color:cornflowerblue; margin-top: 10px;">$70.00</p>
+            </div>
+        </div>
+        <!-- Kartica 7 -->
+        <div class="card" id="sedam" style="background-image:url(sean-pollock-PhYq704ffdA-unsplash.jpg); background-size:cover;background-position:center; width: 300px;
+        height: 390px; ">
+            <div class="button-container">
+                <h4 style="color: white; margin-bottom: 250px;">Meditacija unutrasnja transformacija</h4>
+                <button style="width:200px;height:30px;border-radius:10px;background-color:black; color:white;border:transparent;">Kupi</button>
+                <p style="color: cornflowerblue; margin-top: 10px;">$30.00</p>
+            </div>
+        </div>
+       
+    </div>
+
+</body>
+</html>
+   

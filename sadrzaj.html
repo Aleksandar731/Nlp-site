@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+           @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .slide-in {
+            animation: slideInFromLeft 1s ease-out;
+        }
+      .container {
+            height: 300% !important;
+            width:70%;
+            margin-left:175px; /* Fiksna visina kontejnera */
+            padding:10px;
+
+        }
+
+        .card {
+            width: 70%; /* Puni širina unutar kontejnera */
+            margin-left: 165px !important;
+            height: 200px;
+            background-color: lightblue;
+            margin-bottom: 10px; /* Razmak između divova */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            border-radius: 20px;
+            transition: transform 1.5s ease;
+            box-shadow:2px 2px 3px black;
+
+        }
+
+        .card:first-child {
+            background-image: url('strahovi i nesigurnosti.jpg');
+            background-size: cover;
+            background-position: center;
+             width: 70%;
+            height: 200px;
+            margin-left: auto; /* Automatsko poravnanje slike */
+            margin-right: auto;
+            border-radius: 20px;
+        }
+        #dva{
+            background-image: url("sportista.jpg");
+            background-size: cover;
+            background-position: center;
+
+            width: 70%;
+            height: 200px;
+            margin-left: auto; /* Automatsko poravnanje slike */
+            margin-right: auto;
+            border-radius: 20px;
+        }
+        #tri{
+            background-image: url("dating\ \(2\).jpg");
+            background-size: cover;
+            background-position: center;
+
+            width: 70%;
+            height: 200px;
+            margin-left: auto; /* Automatsko poravnanje slike */
+            margin-right: auto;
+            border-radius: 20px;  
+        }
+        #cetiri{
+            background-image: url("dating.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 70%;
+            height: 200px;
+            margin-left: auto; /* Automatsko poravnanje slike */
+            margin-right: auto;
+            border-radius: 20px; 
+        }
+        #pet{
+            background-image: url("promena.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 70%;
+            height: 200px;
+            margin-left: auto; /* Automatsko poravnanje slike */
+            margin-right: auto;
+            border-radius: 20px; 
+        }
+        #sest{
+            background-image: url("pozitivna-energija.jpg");
+            background-size: cover;
+            background-position: center;
+margin-left:350px !important;
+            width: 49%;
+            height: 210px;
+            margin-left: auto; /* Automatsko poravnanje slike */
+            margin-right: auto;
+            border-radius: 20px;
+        }
+        #sedam{
+            background-image: url("sumnja\ u\ sebe.jpg");
+            background-size: cover;
+            background-position: center;
+margin-left:350px !important;
+            width: 49%;
+            height: 210px;
+            margin-left: auto; /* Automatsko poravnanje slike */
+            margin-right: auto;
+            border-radius: 20px;
+        }
+        #osam{
+            background-image: url("bes.jpg");
+            background-size: cover;
+            background-position: center;
+margin-left:350px !important;
+            width: 49%;
+            height: 210px;
+            margin-left: auto; /* Automatsko poravnanje slike */
+            margin-right: auto;
+            border-radius: 20px;
+        }
+        #devet{
+            background-image: url("uspesna.jpg");
+            background-size: cover;
+            background-position: center;
+margin-left:350px !important;
+            width: 49%;
+            height: 210px;
+            margin-left: auto; /* Automatsko poravnanje slike */
+            margin-right: auto;
+            border-radius: 20px;
+        }
+        body{
+           background-color:whitesmoke;     }
+    
+      
+           #deset{
+            background-image: url("pregovaranje.jpg");
+            background-size: cover;
+            background-position: center;
+margin-left:350px !important;
+            width: 49%;
+            height: 210px;
+            margin-left: auto; /* Automatsko poravnanje slike */
+            margin-right: auto;
+            border-radius: 20px; 
+        }
+        #jedanaest{
+            background-image: url("promena.jpg");
+            background-size: cover;
+            background-position: center;
+margin-left:350px !important;
+            width: 49%;
+            height: 210px;
+            margin-left: auto; /* Automatsko poravnanje slike */
+            margin-right: auto;
+            border-radius: 20px;   
+        }
+        #dvanaest{
+            background-image: url("sah.jpg");
+            background-size: cover;
+            background-position: center;
+margin-left:350px !important;
+            width: 49%;
+            height: 210px;
+            margin-left: auto; /* Automatsko poravnanje slike */
+            margin-right: auto;
+            border-radius: 20px;   
+        }
+        #trinaest{
+            background-image: url("iskrenost.jpg");
+            background-size: cover;
+            background-position: center;
+margin-left:350px !important;
+            width: 49%;
+            height: 210px;
+            margin-left: auto; /* Automatsko poravnanje slike */
+            margin-right: auto;
+            border-radius: 20px; 
+        }
+        #cetrnest{
+            background-image: url("pexels-mastercowley-897817.jpg");
+            background-size: cover;
+            background-position: center;
+margin-left:350px !important;
+            width: 49%;
+            height: 210px;
+            margin-left: auto; /* Automatsko poravnanje slike */
+            margin-right: auto;
+            border-radius: 20px;   
+        }
+        #petnest{
+            background-image: url("sumnja.jpg");
+            background-size: cover;
+            background-position: center;
+margin-left:350px !important;
+            width: 49%;
+            height: 210px;
+            margin-left: auto; /* Automatsko poravnanje slike */
+            margin-right: auto;
+            border-radius: 20px;  
+        }
+        .card:nth-child(even):hover {
+    transform: translateX(-200px);
+}
+
+.card:nth-child(odd):hover {
+    transform: translateX(200px);
+}
+
+    </style>
+</head>
+<body class="slide-in">
+    <div class="container">
+        <div class="card" id="jedan">
+            <h2 style="color: white; margin-left: 50px;border:2px solid black;border-radius:5px; padding:10px;">Strahovi i nesigurnosti</h2>
+            <p style="color:cornflowerblue; margin-left: 50px; font-weight:bold; border:2px solid black;border-radius:5px;padding:10px;">1hr 75$</p>
+        </div>
+        <div class="card" id="dva"> <h2 style="color: white; margin-left: 50px;border:2px solid black;border-radius:5px; padding:10px;">Za profesionalne sportiste</h2>
+            <p style="color:cornflowerblue; margin-left: 50px; font-weight:bold; border:2px solid black;border-radius:5px;padding:10px;">4hr 500$</p></div>
+        <div class="card" id="tri">
+            <h2 style="color: white; margin-left: 50px;border:2px solid black;border-radius:5px;padding:10px;">Dating konsultacije</h2>
+            <p style="color:cornflowerblue; margin-left: 50px; font-weight:bold; border:2px solid black;border-radius:5px;padding:10px;">1hr 75$</p>
+        </div>
+        <div class="card" id="cetiri">  <h2 style="color: white; margin-left: 50px;border:2px solid black;border-radius:5px; padding:10px;">Biznis - trening sesije</h2>
+            <p style="color:cornflowerblue; margin-left: 50px; font-weight:bold; border:2px solid black;border-radius:5px;padding:10px;">2hr dogovor</p></div>
+        <div class="card" id="pet">
+            <h2 style="color: white; margin-left: 50px;border:2px solid black;border-radius:5px; padding:10px;">Zivotna promena - sesije</h2>
+            <p style="color:cornflowerblue; margin-left: 50px; font-weight:bold; border:2px solid black;border-radius:5px;padding:10px;">4hr 500$</p>
+        </div>
+        </div>
+        <div class="card" id="sest">
+            <h2 style="color: white; margin-left: 50px;border:2px solid black;border-radius:5px;padding:10px;">Pozitivna energija - sesije </h2>
+            <p style="color:cornflowerblue; margin-left: 50px; font-weight:bold; border:2px solid black;border-radius:5px;padding:10px;">1hr 75$</p>
+        </div>
+        <div class="card" id="sedam">
+            <h2 style="color: white; margin-left: 50px;border:2px solid black;border-radius:5px;padding:10px;">Unisti sumnje u sebe - sesije</h2>
+            <p style="color:cornflowerblue; margin-left: 50px; font-weight:bold; border:2px solid black;border-radius:5px;padding:10px;">1hr dogovor</p>
+        </div>
+        <div class="card" id="osam">
+            <h2 style="color: white; margin-left: 50px;border:2px solid black;border-radius:5px;padding:10px;">Eliminisi ljutnju i bes</h2>
+            <p style="color:cornflowerblue; margin-left: 50px; font-weight:bold; border:2px solid black;border-radius:5px;padding:10px;">1hr 75$</p>
+        </div>
+        <div class="card" id="devet">
+            <h2 style="color: white; margin-left: 50px;border:2px solid black;border-radius:5px;padding:10px;">Uspesna karijera - coaching</h2>
+            <p style="color:cornflowerblue; margin-left: 50px; font-weight:bold; border:2px solid black;border-radius:5px;padding:10px;">1hr dogovor </p>
+        </div>
+        <div class="card" id="deset">
+            <h2 style="color: white; margin-left: 50px;border:2px solid black;border-radius:5px;padding:10px;">Tehnike pregovaranja</h2>
+            <p style="color:cornflowerblue; margin-left: 50px; font-weight:bold; border:2px solid black;border-radius:5px;padding:10px;">1hr 30 min 150 $</p>
+        </div>
+        <div class="card" id="jedanaest">
+            <h2 style="color: white; margin-left: 50px;border:2px solid black;border-radius:5px;padding:10px;">Iskrenost i autenticnost</h2>
+            <p style="color:cornflowerblue; margin-left: 50px; font-weight:bold; border:2px solid black;border-radius:5px;padding:10px;">1hr 75$</p>
+        </div>
+        <div class="card" id="dvanaest">
+            <h2 style="color: white; margin-left: 50px;border:2px solid black;border-radius:5px;padding:10px;">EFT - tapping sesije</h2>
+            <p style="color:cornflowerblue; margin-left: 50px; font-weight:bold; border:2px solid black;border-radius:5px;padding:10px;">1hr 50$</p>
+        </div>
+        <div class="card" id="trinaest">
+            <h2 style="color: white; margin-left: 50px;border:2px solid black;border-radius:5px; padding:10px;">Samopouzdanje - sesija</h2>
+            <p style="color:cornflowerblue; margin-left: 50px; font-weight:bold; border:2px solid black;border-radius:5px;padding:10px;">1hr 75$</p>
+        </div>
+        <div class="card" id="cetrnest">
+            <h2 style="color: white; margin-left: 50px;border:2px solid black;border-radius:5px; padding:10px;">Anti-stres - sesije </h2>
+            <p style="color:cornflowerblue; margin-left: 50px; font-weight:bold; border:2px solid black;border-radius:5px;padding:10px;">1hr 70$</p>
+        </div>
+        <div class="card" id="petnest">
+            <h2 style="color: white; margin-left: 50px;border:2px solid black;border-radius:5px; padding:10px;">Unisti sumnju u sebe </h2>
+            <p style="color:cornflowerblue; margin-left: 50px; font-weight:bold; border:2px solid black;border-radius:5px;padding:10px;">1hr dogovor</p>
+        </div>
+     
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Shop</title>
+<style>
+    /* Stilizacija */
+    .item {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    body{
+        overflow-x: hidden; /* Uklanja horizontalnu traku za skrolovanje */
+
+    }
+
+    .btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+    }
+    @keyframes slide {
+        0% { margin-left: -60px; } /* Početak animacije */
+        100% { margin-left: calc(100% + 60px); } /* Kraj animacije */
+    }
+    .sliding-img {
+        width: 60px;
+        height: 60px;
+        animation: slide 5s linear infinite; /* Animacija traje 5 sekundi, linearno se povećava, i ponavlja se beskonačno */
+    }
+    .btn:hover {
+        background-color: #45a049;
+    }
+    .quantity {
+        display: inline-block;
+        margin: 0 10px;
+    }
+</style>
+</head>
+<body>
+    <div class="item" data-name="Proizvod 1" data-price="10">
+        <img src="sumnja u sebe.jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 1</h2>
+        <p>Cena: $10</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 2" data-price="20" style="background-color:gray;">
+        <img src="bes.jpg" style="width:200;height:80px; border-radius:50px;">
+        <h2>Proizvod 2</h2>
+        <p>Cena: $20</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 3" data-price="30">
+        <img src="promena.jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 3</h2>
+        <p>Cena: $30</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 1" data-price="10" style="background-color:gray;">
+        <img src="bogatstvo.jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 1</h2>
+        <p>Cena: $10</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 2" data-price="20">
+        <img src="dating (2).jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 2</h2>
+        <p>Cena: $20</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 3" data-price="30" style="background-color:gray;" >
+        <img src="dating.jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 3</h2>
+        <p>Cena: $30</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 1" data-price="10">
+        <img src="dating (2).jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 1</h2>
+        <p>Cena: $10</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 2" data-price="20" style="background-color:gray;">
+        <img src="sportista.jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 2</h2>
+        <p>Cena: $20</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 3" data-price="30">
+        <img src="dating (2).jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 3</h2>
+        <p>Cena: $30</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 1" data-price="10" style="background-color:gray;">
+        <img src="dating (2).jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 1</h2>
+        <p>Cena: $10</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 2" data-price="20">
+        <img src="dating (2).jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 2</h2>
+        <p>Cena: $20</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 3" data-price="30" style="background-color:gray;">
+
+        <img src="promena.jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 3</h2>
+        <p>Cena: $30</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <img src="dating (2).jpg" style="width:80;height:80px; border-radius:50px;">
+
+    <h2>Proizvod 1</h2>
+        <p>Cena: $10</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 2" data-price="20" style="background-color:gray;">
+        <img src="pozitivna-energija.jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 2</h2>
+        <p>Cena: $20</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <img src="dating (2).jpg" style="width:80;height:80px; border-radius:50px;">
+
+    <h2>Proizvod 3</h2>
+        <p>Cena: $30</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 1" data-price="10" style="background-color:gray;">
+        <img src="dating (2).jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 1</h2>
+        <p>Cena: $10</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 2" data-price="20">
+        <img src="sumnja u sebe.jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 2</h2>
+        <p>Cena: $20</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 3" data-price="30">
+        <img src="dating (2).jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 3</h2>
+        <p>Cena: $30</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 1" data-price="10">
+        <img src="dating (2).jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 1</h2>
+        <p>Cena: $10</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 2" data-price="20">
+        <h2>Proizvod 2</h2>
+        <p>Cena: $20</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 3" data-price="30">
+        <img src="dating (2).jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 3</h2>
+        <p>Cena: $30</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 1" data-price="10">
+        <img src="dating (2).jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 1</h2>
+        <p>Cena: $10</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 2" data-price="20">
+        <img src="dating (2).jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 2</h2>
+        <p>Cena: $20</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 3" data-price="30">
+        <img src="dating (2).jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 3</h2>
+        <p>Cena: $30</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 1" data-price="10">
+        <img src="dating (2).jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 1</h2>
+        <p>Cena: $10</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 2" data-price="20">
+        <img src="dating (2).jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 2</h2>
+        <p>Cena: $20</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 3" data-price="30">
+        <img src="dating (2).jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 3</h2>
+        <p>Cena: $30</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 1" data-price="10">
+        <img src="dating (2).jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 1</h2>
+        <p>Cena: $10</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 2" data-price="20">
+        <img src="dating (2).jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 2</h2>
+        <p>Cena: $20</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <div class="item" data-name="Proizvod 3" data-price="30">
+        <img src="dating (2).jpg" style="width:80;height:80px; border-radius:50px;">
+
+        <h2>Proizvod 3</h2>
+        <p>Cena: $30</p>
+        <button class="btn" onclick="addToCart(this)">Dodaj u korpu</button>
+        <span class="quantity">0</span>
+        <button class="btn" onclick="removeFromCart(this)">Ukloni iz korpe</button>
+    </div>
+    <h2>Stavke u korpi:</h2><br>
+    <img src="card.png" style="width:60px;height:60px;"class="sliding-img">
+    <ul id="cart"></ul>
+    
+    <script>
+        // Funkcija za dodavanje u korpu
+        function addToCart(button) {
+            var item = button.parentNode;
+            var name = item.getAttribute("data-name");
+            var price = parseInt(item.getAttribute("data-price"));
+            var quantityElement = item.querySelector(".quantity");
+            var quantity = parseInt(quantityElement.innerText);
+            quantity++;
+            quantityElement.innerText = quantity;
+            updateCartTotal(price);
+        }
+        
+        // Funkcija za uklanjanje iz korpe
+        function removeFromCart(button) {
+            var item = button.parentNode;
+            var price = parseInt(item.getAttribute("data-price"));
+            var quantityElement = item.querySelector(".quantity");
+            var quantity = parseInt(quantityElement.innerText);
+            if (quantity > 0) {
+                quantity--;
+                quantityElement.innerText = quantity;
+                updateCartTotal(-price);
+            }
+        }
+        
+        // Funkcija za ažuriranje ukupnog iznosa korpe
+        function updateCartTotal(price) {
+            var cartTotalElement = document.getElementById("cartTotal");
+            var cartTotal = parseInt(cartTotalElement.innerText);
+            cartTotal += price;
+            cartTotalElement.innerText = cartTotal;
+        }
+    </script>
+    <h2>Ukupno: $<span id="cartTotal">0</span></h2>
+</body>
+</html>

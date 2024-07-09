@@ -1,0 +1,476 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: wheat;
+    font-family: Arial;
+    font-size: 30px;
+    overflow-y: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.kiro {
+    opacity: 0.6 !important;
+    transition: opacity 0.3s linear !important; /* Dodajemo tranziciju za glatku promenu */
+    transition: opacity 1.5s ease;
+}
+
+.kiro:hover {
+    opacity: 1 !important;
+    animation: jump 0.8s infinite alternate; /* Dodajemo animaciju */
+
+}
+
+
+
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(30) !important;
+    }
+    50% {
+        transform: translateY(-30px) !important;
+    }
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin-top:-8px !important;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size:20px;
+    background: transparent;
+    margin-top:-5px;
+
+}
+/* Animacija za skakutanje teksta */
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Navigacija */
+nav .link {
+    padding: 10px;
+    color: slategray;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 20px;
+    display: inline-block;
+    transition: color 0.3s ease;
+    font-weight: bold;
+    margin-top:-20px;
+    animation: fadeIn 2s ease-in-out !important;
+padding:20px;}
+
+/* Animacija na hover */
+nav .link:hover {
+    animation: jump 1s ease-in-out infinite;
+
+  color:#888; /* Promena boje teksta na hover, opcionalno */
+}
+
+
+
+
+.section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color:white;
+    font-size: 6em;
+}
+
+.purple {
+    background-image:url();
+    background-size:cover;
+    background-position:center;}
+
+.red {
+    color: wheat;
+}
+
+.orange {
+    color: wheat;
+}
+
+.white {
+    color: wheat;
+}
+
+.black {
+    color: wheat;
+}
+
+#section1{
+    background-image:url("kara.png");
+
+}
+/* Button styling */
+.mouse-btn {
+    margin: 10px auto;
+    width: 80px;
+    height: 140px;
+    margin-left:350px;
+    margin-top:440px;
+    border: 3px solid rgba(122, 122, 124, 0.918);
+    border-radius: 50px;
+    display: flex;
+    
+  }
+  
+  .mouse-scroll {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(170deg, rgba(122, 122, 124, 0.918), rgb(123, 124, 124));
+    border-radius: 50%;
+    margin: auto;
+
+    animation: scrolling13 1s linear infinite;
+  }
+  
+  @keyframes scrolling13 {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(20px);
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translate(-50%, -100%);
+    }
+    100% {
+        transform: translate(-50%, 0);
+    }
+}
+body::before {
+    content: '';
+    position: absolute;
+    animation: fadeIn 2s ease-in-out !important;
+    top: 0;
+    left: 0;
+box-shadow:5px 3px 4px black;;
+    width: 90%;
+    height: 100%;
+    background: linear-gradient(gray, black);
+    clip-path: circle(25% at left 70%); /* Promena pozicije kruga na suprotnu stranu */
+}
+
+p{
+    font-size:10px;
+
+}
+h5{
+    font-size:20px;
+}
+
+
+
+
+  
+
+.card-container{
+    width:300px;
+    height:300px;
+    display:flex;
+    
+}
+.h3{
+    font-size:40px;
+    margin-left:80px;
+    color:black !important;
+}
+.kartica{
+    width:300px;
+    height:300px;
+   
+
+    border-radius:40px;
+    border:2px gainsboro !important;
+    margin-left:145px;
+}
+.jaquar-icon {
+    margin-bottom:20px;
+    margin-left:65px;
+    font-size: 140px; /* Ensures the icon scales to 50px */
+    width: 14px;     /* Sets the width to 50px */
+    height: 140px; 
+    color:black !important;   /* Sets the height to 50px */
+}
+#section3{
+  
+  
+        background-image: url('seminari.jpg');
+        background-position: center calc(0% - 2px);
+        background-size: cover;
+    
+    
+
+    
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    width:100% !important;
+}
+
+.kartica1, .kartica2, .kartica3 {
+    width: 100% !important;
+    height: 150px;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    box-shadow: 8px 8px 8px 2px rgba(0, 0, 0, 0.5);    transition: transform 1.5s ease;
+    text-align: center;
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white !important;
+    opacity:0.7;
+    border-radius:15px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.kartica1, .kartica2, .kartica3, .kartica4 {
+    animation: fadeIn 2s ease-in;
+}
+
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+/* Hover efekat za karticu1 - pomeranje na gore za 20px */
+.kartica1:hover {
+    transform: translateY(-50px);
+    background-color:wheat!important;
+}
+
+/* Hover efekat za karticu2 - pomeranje na dole za 20px */
+.kartica2:hover {
+    transform: translateY(50px);
+    background-color:wheat!important;
+}
+
+/* Hover efekat za karticu3 - pomeranje na gore za 20px */
+.kartica3:hover {
+    transform: translateY(-50px);
+    background-color:wheat!important;
+  
+}
+
+.h3 {
+    margin: 0;
+    font-size: 18px;
+   
+}
+
+.jaquar-icon {
+    font-size: 25px;
+    color: black;
+ margin-top:40px;
+    transition: transform 1.5s ease; /* Dodajemo tranziciju za transformaciju */
+}
+
+.jaquar-icon:hover {
+    transform: scale(1.7) rotate(360deg); /* Uvećava ikonicu za 50% i rotira je za 360 stepeni prilikom hovera */
+}
+
+
+
+
+
+
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom:-30px;
+}
+
+
+
+    
+
+
+
+.custom-shape-divider-bottom-1716056369 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1716056369 svg {
+    position: relative;
+    display: block;
+    width: calc(202% + 1.3px);
+    height: 141px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1716056369 .shape-fill {
+    fill: #FFFFFF52;
+}
+.center {
+    display: table;
+    width: 100%;
+    height: 100vh;
+  }
+  .logo{
+    animation: fadeIn 2s !important;
+  }
+  
+  #social-test {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 5px;
+
+    h2 {
+      color: #fff;
+      font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+      font-weight: 100;
+     
+    }
+    .social {
+      padding-left: 0px;
+    margin-right:-1125px !important;
+margin-bottom: 850px !important;
+}
+    li {
+      color: black;
+      list-style-type: none;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      margin:5px;
+      padding: 1%;
+      border:none !important;
+      cursor: pointer;
+      border-radius:30px;
+      margin-left: 10px;
+      font-size:20px;
+      transition: transform 2s ease-in-out, color 0.3s ease;
+      margin-bottom: 20px;
+      transition: ease .8s;
+      &:hover {
+      
+        border: 2px solid rgba(167, 146, 129, 1);
+      }
+    }
+  }
+
+   li:hover {
+        transform: scale(1.4) !important;
+    }
+  .social:hover > li {
+    opacity: 1;
+  }
+  
+  .social:hover > li:hover {
+    opacity: 1;
+  }
+  .fa-facebook:hover {
+    color: blue;
+}
+.fab.fa-youtube:hover {
+    color: red;
+}
+.fa-instagram:hover {
+    color: purple;
+
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
+
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	-moz-font-smoothing:antialiased;
+	-o-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+
+body {
+	font-family:"Open Sans", Helvetica, Arial, sans-serif;
+	font-weight:300;
+	font-size: 12px;
+	line-height:30px;
+	color:#777;
+	background-color:#232323;
+	background-image: url('https://images.unsplash.com/photo-1467241850596-6a0de48568da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80');
+	background-size: cover;
+}
+
+.container {
+	max-width:400px;
+	width:100%;
+	margin:0 auto;
+	position:relative;
+}
+
+
+
+    
+.logo {
+    transition: transform 1.3s ease-in-out !important;
+}
+
+.logo:hover {
+    transform: rotate(360deg) !important;
+}
+
+a{
+    font-size:18px;
+    text-decoration:none;
+    color:cornflowerblue;
+    font-weight: bold;
+}
+.daw{
+    margin-right:-70px !important;
+}

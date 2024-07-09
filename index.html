@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        /* Stilizacija popup prozora */
+/* Stilizacija popup prozora */
+/* Stilizacija popup prozora */
+
+   .popup-container{
+    width:300px;
+    background:white;
+    height:270px;
+    border-radius:20px;
+    text-align:center;
+    position:absolute;
+    top:50%;
+    opacity: 1;
+    visibility: visible;
+    left:50%;
+    transition: opacity 1s ease-out, visibility 1s ease-out;
+
+   
+   padding:0 30px 30px;
+   color:#333;
+margin-left:-240px;
+   transform:translate(-50%,-50%);
+   }
+   .popup-container.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+   .biha{
+    width: 80%;
+    margin-top:50px;
+    height:30px;
+    padding-bottom:10px;
+    background:#6fd649;
+    color:#fff;
+    border:0;
+    outline:none;
+    font-size:18px;
+    border-radius:4px;
+    border-radius:10px;
+    cursor:pointer;
+    box-shadow:1px 6px 5px rgba(0,0,0,0.2);
+   }
+   .cvr{
+width:100px;
+margin-top:-50px;
+border-radius:50%;
+box-shadow:1px 3px 5px rgba(0,0,0,0.2); 
+}
+.tenk{
+    font-size:38px;
+    font-weight:500;
+}
+.gazfa{
+    font-size:11px;
+    font-weight:bold;
+    padding-top:20px;
+
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Početna i krajnja tačka */
+    }
+    50% {
+        transform: translateY(-30px); /* Srednja tačka - skakanje gore */
+    }
+}
+.popup-container {
+    animation: bounce 2s infinite; /* Pokretanje animacije */
+    margin-left:-400px;
+    margin-top:-110px;
+}
+#section1{
+    background-image:url("ne.png");
+    background-size:cover;
+    backgrond-position:center;
+
+}
+@keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Primena animacije na ikonice */
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+
+        /* Stilovi za ikonice */
+        .social-icon {
+            display: inline-block;
+            margin: 0 10px; /* Podešavanje razmaka između ikonica */
+            font-size: 24px; /* Veličina ikonica */
+            transition: opacity 0.3s ease-in-out; /* Tranzicija za promenu opacity-a */
+        }
+    </style>
+</head>
+<body >
+    <nav>
+        <img src="logo.jpg" class="logo" style="width:50px;height:50px; border-radius:50%; margin-right:830px; margin-top:5px !important;opacity:0.7; ">
+
+    <a href="#section1" class="link purple">
+     <i class="fas fa-home" style="margin-bottom:80px;"></i> Pocetna</a>
+     <a href="#section3" class="link orange"><i class="fas fa-cogs"></i> Usluge</a>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="center">
+    <div id="social-test">
+      
+        
+    <ul class="social">
+        <li class="social-icon fade-in"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+        <li class="social-icon fade-in"><i class="fa fa-instagram" aria-hidden="true"></i></li>
+        <li class="social-icon fade-in"><i class="fab fa-youtube" aria-hidden="true"></i></li>
+</li>
+    </ul>
+</nav>
+<div class="wrapper">
+    <div id="section1" class="section purple">
+        <div class="container_mouse">
+            <span class="mouse-btn">
+                <span class="mouse-scroll"></span>
+            </span>
+            
+        </div>
+        <div id="text-container">
+            <div id="text"></div>
+        </div>
+    </div>
+  
+    <div id="section3" class="section orange">
+        <div class="card-container">
+       <div class="kartica1">
+        <h3 class="h3">Onlajn seminari</h3>
+        <a href="sadrzaj.html">Pogledaj vise</a>
+
+        <i class="fas fa-video jaquar-icon"></i>
+    </div>
+       <div class="kartica2">
+        <h3 class="h3">Koucing sesije</h3>
+        <a href="nesto.html">Pogledaj vise</a>
+
+        <i class="fas fa-chalkboard-teacher jaquar-icon"></i>
+    </div>
+       <div class="kartica3">
+        <h3 class="h3">Vodjene meditacije</h3>
+        <a href="meditacije.html">Pogledaj vise</a>
+
+        <i class="fas fa-brain jaquar-icon"></i>
+       </div>
+       <div class="kartica2">
+        <h3 class="h3">Paketi</h3>
+        <a href="paketi.html">Pogledaj vise</a>
+
+        <i class="fas fa-box-open jaquar-icon"></i>
+    </div>
+        </div>
+       
+    </div>
+
+    <div class="custom-shape-divider-bottom-1716056369">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+  
+        </div>
+       
+    </div>
+    
+  
+    
+    <div class="popup-container animate__animated animate__bounce" id="popup-container">
+        <img src="404-tick.png" class="cvr">
+        <h2 class="tenk">Dobrodošli!</h2>
+        <p class="gazfa">Da li ste spremni za zivot koji zasluzujete?<br>
+            Ovaj sajt je putokaz ka vasem potencijalu.
+        </p>
+        <button type="button" class="biha" id="close-button">Spreman!
+        </button>
+    </div>
+    
+<script>
+document.getElementById('close-button').addEventListener('click', function() {
+const popup = document.getElementById('popup-container');
+popup.classList.add('hidden');
+});
+</script>
+</body>
+
+
+    
+      
+
+</html>
